@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block sub_content %}
+<div class="container text-center">
+    <h3>{{ post['title'] }}</h3>
+</div>
+<hr/>
+<div class="container">
+    <p>{{ post['body'] }}</p>
+</div>
+<hr/>
+<div class="container text-left">
+    <h6>Written by {{ post['author'] }}</h6>
+</div>
+{% endblock %}

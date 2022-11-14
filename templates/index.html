@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block sub_content %}
+<div class="text-center">
+    <h1>Posts</h1>
+</div>
+
+{% if post %}
+    {% for p in post %}
+    <h3> 
+       <a href="/blogs/{{ p['blog_id'] }}">{{ p['title'] }}</a> 
+    </h3>
+    <h5>Written by {{ p['author'] }}</h5>
+    <hr>
+    {% endfor %}
+{% else %}
+    <h3>No blogs have been written yet</h3>
+{% endif %}
+
+{% endblock %}
